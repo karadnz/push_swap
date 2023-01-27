@@ -83,7 +83,7 @@ void do_twice(t_stack *stack_1, t_stack *stack_2, char *msg)
 {
 	if (!ft_strncmp(msg, "ss", 2)) //check
 	{
-		swap(stack_1,"\0");
+		swap(stack_1,"\0"); //0 gelince yazdirmama ekle
 		swap(stack_2,"\0");
 	}
 
@@ -98,8 +98,6 @@ void do_twice(t_stack *stack_1, t_stack *stack_2, char *msg)
 		rotate(stack_1,"\0");
 		rotate(stack_2,"\0");
 	}
-
-	
 
 	else
 	{

@@ -6,14 +6,27 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:40:21 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/27 14:50:16 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:13:01 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
 int main(int ac, char **av)
+{
+	if (ac < 2)
+		return (0);
+
+	t_stack *a = (t_stack *)malloc(sizeof(t_stack));
+	t_stack *b = (t_stack *)malloc(sizeof(t_stack));
+
+	init(ac, av, a, b);
+
+	return(0);
+}
+
+
+int main7(int ac, char **av)
 {
 	if (ac < 2)
 		return (0);

@@ -12,7 +12,7 @@ static int	ft_isspace(int c)
 	return (0);
 }
 
-static int	ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 	{

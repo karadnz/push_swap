@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:43:35 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/27 14:44:28 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/01/27 17:00:33 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,15 @@ void do_twice(t_stack *stack_1, t_stack *stack_2, char *msg);
 
 //libftutils
 int	ft_atoi(const char *str);
+int	ft_isdigit(int c);
 
 
 //init
 void init (int ac, char **av, t_stack *stack_a, t_stack *stack_b);
 void fillstack(int ac, char **av, t_stack *stack_a, t_stack *stack_b);
+int check_num(int ac, char **av);
+int check_duplicate(int ac, char **av);
+int check_sorted(int ac, char **av);
 
 
 
