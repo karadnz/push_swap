@@ -91,8 +91,6 @@ int check_sorted(int ac, char **av)
 	int *arr1;
 	int *arr2;
 	int	i;
-	int j;
-	int	tmp;
 
 	arr1 = (int *)malloc(sizeof(int) * (ac - 1));
 	arr2 = (int *)malloc(sizeof(int) * (ac - 1));
@@ -103,43 +101,13 @@ int check_sorted(int ac, char **av)
 		arr2[i - 1] = ft_atoi(av[i]);
 		printf("iter: %d, arr: %d, av: %s\n",i, arr1[i - 1], av[i]);
 	}
+	bubble_sort(arr1, ac - 1);
 
-	i = 0;
-	while (i < ac - 1)
+	for (int i = 0; i < ac - 1; i++)
 	{
-		j = 0;
-		while (i + j < ac -1)
-		{
-			
-			if (arr1[i] > arr1[i + j])
-			{
-				
-				tmp = arr1[i];
-				arr1[i] = arr1[i + j];
-				arr1[i + j] = tmp;
-			}
-			j++;
-		}
-		i++;
-	
+		printf("%d\n",arr1[i]);
 	}
 
-	/*i = 0;
-
-	while (i < ac - 1)
-	{
-		printf("%d\n", arr1[i]);
-		i++;
-	}*/
-	i = 0;
-	while (i < ac - 1)
-	{
-		if (arr1[i] != arr2[i])
-			return (1);
-		i++;
-	}
-
-	return (0);
-
+	return (compare_arrays(arr1, arr2, ac - 1)); //free
 }
 

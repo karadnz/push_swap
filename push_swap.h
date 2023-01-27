@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:43:35 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/27 17:00:33 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/01/27 19:04:37 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,10 @@ void fillstack(int ac, char **av, t_stack *stack_a, t_stack *stack_b);
 int check_num(int ac, char **av);
 int check_duplicate(int ac, char **av);
 int check_sorted(int ac, char **av);
+
+//init utils
+int	compare_arrays(int *arr1, int *arr2, int size);
+void bubble_sort(int *arr1, int size);
 
 
 
