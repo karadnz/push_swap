@@ -47,6 +47,8 @@ int check_num(int ac, char **av)
 	while (ac > 1)
 	{
 		i = 0;
+		if (av[ac - 1][i] == '-')
+			i++;
 		while(av[ac - 1][i] != '\0') //null
 		{
 			if (!ft_isdigit(av[ac - 1][i]))
@@ -68,7 +70,7 @@ int check_duplicate(int ac, char **av)
 	while (i < ac)
 	{
 		arr[i - 1] = ft_atoi(av[i]);
-		printf("iter: %d, arr: %d, av: %s ac:%d\n",i, arr[i - 1], av[i], ac);
+		//printf("iter: %d, arr: %d, av: %s ac:%d\n",i, arr[i - 1], av[i], ac);
 		i++;
 	}
 	i = 0;
@@ -99,13 +101,13 @@ int check_sorted(int ac, char **av)
 	{
 		arr1[i - 1] = ft_atoi(av[i]);
 		arr2[i - 1] = ft_atoi(av[i]);
-		printf("iter: %d, arr: %d, av: %s\n",i, arr1[i - 1], av[i]);
+		//printf("iter: %d, arr: %d, av: %s\n",i, arr1[i - 1], av[i]);
 	}
 	bubble_sort(arr1, ac - 1);
 
 	for (int i = 0; i < ac - 1; i++)
 	{
-		printf("%d\n",arr1[i]);
+		//printf("%d\n",arr1[i]);
 	}
 
 	return (compare_arrays(arr1, arr2, ac - 1)); //free

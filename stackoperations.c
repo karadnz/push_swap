@@ -50,7 +50,7 @@ void rotate(t_stack *stack, char *msg) //check 1 size
 		i--;
 	}
 	stack->array[0] = tmp;
-	printf("%s",msg);
+	printf("%s\n",msg);
 
 }
 
@@ -68,7 +68,7 @@ void reverse_rotate(t_stack *stack, char *msg) //check 1 size
 		i++;
 	}
 	stack->array[stack->top] = tmp;
-	printf("%s",msg);
+	printf("%s\n",msg);
 
 }
 
@@ -76,7 +76,7 @@ void push_other(t_stack *stack_1, t_stack *stack_2, char *msg) //check empty
 {
 	push(stack_2, stack_1->array[stack_1->top]);
 	pop(stack_1);
-	printf("%s", msg);
+	printf("%s\n", msg);
 }
 
 void do_twice(t_stack *stack_1, t_stack *stack_2, char *msg)

@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:40:21 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/27 18:13:01 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/01/28 23:24:42 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,16 @@ int main(int ac, char **av)
 	t_stack *b = (t_stack *)malloc(sizeof(t_stack));
 
 	init(ac, av, a, b);
+
+	//printstack(a,"a");
+	get_index(a);
+	//printstack(a,"a");
+
+	radix_main(a, b);
+	//printstack(a,"a");
+	//printstack(b,"b");
+
+	
 
 	return(0);
 }

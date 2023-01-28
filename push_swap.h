@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:43:35 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/27 19:04:37 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/01/28 23:24:15 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,29 @@ int check_sorted(int ac, char **av);
 //init utils
 int	compare_arrays(int *arr1, int *arr2, int size);
 void bubble_sort(int *arr1, int size);
+
+//index
+void get_index(t_stack *a);
+int	*get_sorted(int *src, int size);
+
+
+
+//radix
+
+void	radix_main(t_stack *stack_a, t_stack *stack_b);
+void	digit_sort(t_stack *stack_a, t_stack *stack_b, int place);
+int	get_digit_at_place(int num, int place);
+int	get_max(t_stack *stack);
+int	get_max_place(int num);
+
+
+//radix bit
+void	radix_main(t_stack *stack_a, t_stack *stack_b);
+void bit_sort(t_stack *stack_a, t_stack *stack_b, int bit_place);
+int leftmost(unsigned int n);
+int	get_max(t_stack *stack);
+int check_sorted_stack(t_stack *stack);
+void bubble_stack_sort(int *arr1, int size);
 
 
 
