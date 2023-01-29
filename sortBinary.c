@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 19:51:20 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/29 00:42:07 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/01/29 03:00:46 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void bit_sort(t_stack *stack_a, t_stack *stack_b, int bit_place)
 	for (int i = 0; i < a_size; i++)
 	{
 		//printf("inner iter: %d\n", i);
-		if (((peek(stack_a) >> (bit_place)) & 1) && (!(stack_a->size == 1) && (i == a_size - 1))) //&& (i != a_size - 1)
+		if (((peek(stack_a) >> (bit_place)) & 1)) //&& (i != a_size - 1)
 			rotate(stack_a, "ra");
 		else
 		{
