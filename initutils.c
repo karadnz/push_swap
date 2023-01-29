@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   initutils.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/29 08:38:06 by mkaraden          #+#    #+#             */
+/*   Updated: 2023/01/29 08:38:42 by mkaraden         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	compare_arrays(int *arr1, int *arr2, int size)
@@ -5,16 +17,16 @@ int	compare_arrays(int *arr1, int *arr2, int size)
 	int	i;
 
 	i = 0;
-	while(i < size)
+	while (i < size)
 	{
 		if (arr1[i] != arr2[i])
 			return (1);
 		i++;
 	}
-	return(0);
+	return (0);
 }
 
-void bubble_sort(int *arr1, int size)
+void	bubble_sort(int *arr1, int size)
 {
 	int	i;
 	int	j;
@@ -26,10 +38,8 @@ void bubble_sort(int *arr1, int size)
 		j = 0;
 		while (i + j < size)
 		{
-			
 			if (arr1[i] > arr1[i + j])
 			{
-				
 				tmp = arr1[i];
 				arr1[i] = arr1[i + j];
 				arr1[i + j] = tmp;
@@ -37,7 +47,5 @@ void bubble_sort(int *arr1, int size)
 			j++;
 		}
 		i++;
-	
 	}
-
 }
