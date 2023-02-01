@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 08:32:47 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/29 08:36:39 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/01 15:10:21 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,11 +84,16 @@ int	check_duplicate(int ac, char **av)
 		while (j < ac - 1)
 		{
 			if (arr[i] == arr[j])
+			{
+				free(arr);
 				return (0);
+			}
+				
 			j++;
 		}
 		i++;
 	}
+	free(arr);
 	return (1);
 }
 
@@ -97,6 +102,7 @@ int	check_sorted(int ac, char **av)
 	int	*arr1;
 	int	*arr2;
 	int	i;
+	int	rt;
 
 	arr1 = (int *)malloc(sizeof(int) * (ac - 1));
 	arr2 = (int *)malloc(sizeof(int) * (ac - 1));
@@ -107,5 +113,8 @@ int	check_sorted(int ac, char **av)
 		arr2[i - 1] = ft_atoi(av[i]);
 	}
 	bubble_sort(arr1, ac - 1);
-	return (compare_arrays(arr1, arr2, ac - 1));
+	rt = compare_arrays(arr1, arr2, ac - 1);
+	free(arr1);
+	free(arr2);
+	return (rt);
 }

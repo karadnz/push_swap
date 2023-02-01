@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:43:35 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 09:52:09 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/01 15:11:25 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,17 @@ int leftmost(unsigned int n);
 int	get_max(t_stack *stack);
 int check_sorted_stack(t_stack *stack);
 void bubble_stack_sort(int *arr1, int size);
+
+
+//small sort
+void	small_sort(t_stack *stack_a, t_stack *stack_b);
+void	sort_two(t_stack *stack_a, t_stack *stack_b);
+void	sort_three(t_stack *stack_a, t_stack *stack_b);
+void	sort_four(t_stack *stack_a, t_stack *stack_b);
+void	sort_five(t_stack *stack_a, t_stack *stack_b);
+void	transform(t_stack *stack_a, int size);
+int check_stack_sorted(t_stack *stack);
+
 
 
 

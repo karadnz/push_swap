@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 13:31:30 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 09:46:50 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/01 11:11:15 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	get_index(t_stack *a)
 		}
 		i++;
 	}
+	free(tmp);
 }
 
 int	*get_sorted(int *src, int size)

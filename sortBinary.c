@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 19:51:20 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 09:52:55 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/01 13:06:11 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ void	radix_main(t_stack *stack_a, t_stack *stack_b)
 	int	iter_count;
 	int	i;
 
+	if (stack_a->size < 6)
+	{
+		small_sort(stack_a, stack_b);
+		return ;
+	}
+		
 	i = 0;
 	iter_count = leftmost(get_max(stack_a));
 	while (i < iter_count)

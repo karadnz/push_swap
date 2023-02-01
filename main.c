@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:40:21 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/29 06:37:55 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/01 11:14:41 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int	main(int ac, char **av)
 	init(ac, av, a, b);
 	get_index(a);
 	radix_main(a, b);
+	free_stacks(a,b);
 	return (0);
 }

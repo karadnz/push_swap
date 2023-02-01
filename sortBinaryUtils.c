@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 09:29:47 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 09:53:56 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/01 11:13:00 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,14 @@ int	get_max(t_stack *stack)
 	tmp = get_sorted(stack->array, stack->size);
 	rt = tmp[stack->top];
 	free(tmp);
-	return (tmp[stack->top]);
+	return (rt);
 }
 
 int	check_sorted_stack(t_stack *stack)
 {
 	int	*tmp;
 	int	i;
+	int rt;
 
 	i = 0;
 	tmp = (int *)malloc(sizeof(int) * (stack->size));
@@ -53,7 +54,9 @@ int	check_sorted_stack(t_stack *stack)
 		i++;
 	}
 	bubble_stack_sort(tmp, stack->size);
-	return (compare_arrays(tmp, stack->array, stack->size));
+	rt = compare_arrays(tmp, stack->array, stack->size);
+	free(tmp);
+	return (rt);
 }
 
 void	bubble_stack_sort(int *arr1, int size)
