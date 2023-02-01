@@ -1,53 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   index.c                                            :+:      :+:    :+:   */
+/*   stackExtra.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 13:31:30 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 09:46:50 by mkaraden         ###   ########.fr       */
+/*   Created: 2023/02/01 09:43:45 by mkaraden          #+#    #+#             */
+/*   Updated: 2023/02/01 09:51:58 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	get_index(t_stack *a)
+void	printstack(t_stack *stack, char *msg)
 {
-	int	*tmp;
 	int	i;
-	int	j;
 
-	i = 0;
-	tmp = get_sorted(a->array, a->size);
-	while (i < a->size)
+	i = stack->top;
+	while (i > -1)
 	{
-		j = 0;
-		while (j < a->size)
-		{
-			if (a->array[i] == tmp[j])
-			{
-				a->array[i] = j;
-				break ;
-			}
-			j++;
-		}
-		i++;
+		printf("%d\n", stack->array[i]);
+		i--;
 	}
+	printf("_\n%s top: %d\n", msg, peek(stack));
 }
 
-int	*get_sorted(int *src, int size)
+void	free_stacks(t_stack *stack_a, t_stack *stack_b)
 {
-	int	i;
-	int	*rt;
-
-	i = 0;
-	rt = (int *)malloc(sizeof(int) * size);
-	while (i < size)
-	{
-		rt[i] = src[i];
-		i++;
-	}
-	bubble_sort(rt, size);
-	return (rt);
+	free(stack_a->array);
+	free(stack_b->array);
+	free(stack_a);
+	free(stack_b);
 }

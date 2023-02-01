@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 08:39:07 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/29 08:39:11 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/01 09:54:16 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,22 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (rt * sign);
+}
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (s1[i] && s2[i] && i < n)
+	{
+		if (!(s1[i] == s2[i]))
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	if (i == n)
+		i--;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
