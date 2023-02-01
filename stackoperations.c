@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 10:29:19 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 09:52:27 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/01 17:02:41 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	swap(t_stack *stack, char *msg)
 		printf("%s\n", msg);
 		return ;
 	}
-	printf("error at swap\n");
+	write(1, msg, 2);
+	write(1, "\n", 1);
 }
 
 void	rotate(t_stack *stack, char *msg)
@@ -40,7 +41,8 @@ void	rotate(t_stack *stack, char *msg)
 		i--;
 	}
 	stack->array[0] = tmp;
-	printf("%s\n", msg);
+	write(1, msg, 2);
+	write(1, "\n", 1);
 }
 
 void	reverse_rotate(t_stack *stack, char *msg)
@@ -56,14 +58,16 @@ void	reverse_rotate(t_stack *stack, char *msg)
 		i++;
 	}
 	stack->array[stack->top] = tmp;
-	printf("%s\n", msg);
+	write(1, msg, 3);
+	write(1, "\n", 1);
 }
 
 void	push_other(t_stack *stack_1, t_stack *stack_2, char *msg)
 {
 	push(stack_2, stack_1->array[stack_1->top]);
 	pop(stack_1);
-	printf("%s\n", msg);
+	write(1, msg, 2);
+	write(1, "\n", 1);
 }
 
 void	do_twice(t_stack *stack_1, t_stack *stack_2, char *msg)
@@ -88,5 +92,6 @@ void	do_twice(t_stack *stack_1, t_stack *stack_2, char *msg)
 		printf("error at do_twice\n");
 		return ;
 	}
-	printf("%s", msg);
+	write(1, msg, 2);
+	write(1, "\n", 1);
 }

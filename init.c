@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 08:32:47 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 15:10:21 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/01 17:20:40 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,20 @@ void	init(int ac, char **av, t_stack *stack_a, t_stack *stack_b)
 {
 	if (!check_num(ac, av))
 	{
-		printf("Error: invalid input(number)\n");
+		//printf("Error\n");
+		write(2, "Error\n", 6);
 		exit(1);
 	}
 	if (!check_duplicate(ac, av))
 	{
-		printf("Error: invalid input(duplicate)\n");
+		write(2, "Error\n", 6);
 		exit(1);
 	}
 	if (!check_sorted(ac, av))
 	{
-		printf("Error: invalid input(sorted)\n");
+		write(2, "Error\n", 6);
+		write(1,"\n",2);
+		free_stacks(stack_a, stack_b);
 		exit(1);
 	}
 	fillstack(ac, av, stack_a, stack_b);
