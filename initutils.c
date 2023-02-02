@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 08:38:06 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/01/29 08:38:42 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/02 18:02:11 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,19 @@ void	bubble_sort(int *arr1, int size)
 		}
 		i++;
 	}
+}
+
+int	*fill_duplicate(int ac, char **av)
+{
+	int	*rt;
+	int	i;
+
+	rt = (int *)malloc(sizeof(int) * (ac - 1));
+	i = 1;
+	while (i < ac)
+	{
+		rt[i - 1] = ft_atoi(av[i]);
+		i++;
+	}
+	return (rt);
 }

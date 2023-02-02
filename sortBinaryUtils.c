@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 09:29:47 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 11:13:00 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/02 17:54:29 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	check_sorted_stack(t_stack *stack)
 {
 	int	*tmp;
 	int	i;
-	int rt;
+	int	rt;
 
 	i = 0;
 	tmp = (int *)malloc(sizeof(int) * (stack->size));

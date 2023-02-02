@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 08:32:47 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 17:20:40 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/02 18:03:54 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ void	init(int ac, char **av, t_stack *stack_a, t_stack *stack_b)
 {
 	if (!check_num(ac, av))
 	{
-		//printf("Error\n");
 		write(2, "Error\n", 6);
+		free_stacks(stack_a, stack_b);
 		exit(1);
 	}
 	if (!check_duplicate(ac, av))
 	{
 		write(2, "Error\n", 6);
+		free_stacks(stack_a, stack_b);
 		exit(1);
 	}
 	if (!check_sorted(ac, av))
 	{
 		write(2, "Error\n", 6);
-		write(1,"\n",2);
 		free_stacks(stack_a, stack_b);
 		exit(1);
 	}
@@ -73,13 +73,7 @@ int	check_duplicate(int ac, char **av)
 	int	i;
 	int	j;
 
-	arr = (int *)malloc(sizeof(int) * (ac - 1));
-	i = 1;
-	while (i < ac)
-	{
-		arr[i - 1] = ft_atoi(av[i]);
-		i++;
-	}
+	arr = fill_duplicate(ac, av);
 	i = 0;
 	while (i < ac - 1)
 	{
@@ -91,7 +85,6 @@ int	check_duplicate(int ac, char **av)
 				free(arr);
 				return (0);
 			}
-				
 			j++;
 		}
 		i++;
