@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 08:39:07 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 09:54:16 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/02 18:48:07 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,31 @@ int	ft_isdigit(int c)
 		return (1);
 	}
 	return (0);
+}
+
+long	ft_atoi_check(const char *str)
+{
+	long	rt;
+	int		sign;
+	int		i;
+
+	rt = 0;
+	sign = 1;
+	i = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (ft_isdigit(str[i]))
+	{
+		rt = (rt * 10) + (str[i] - '0');
+		i++;
+	}
+	return (rt * sign);
 }
 
 int	ft_atoi(const char *str)

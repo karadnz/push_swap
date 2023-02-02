@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:43:35 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/02 18:10:48 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/02 18:28:48 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ typedef struct s_stack
 	int		size;
 	int		top;
 }				t_stack;
-//stac	
+//stack
 void	resize(t_stack *stack);
 void	init_stack(t_stack *stack, int size);
 void	push(t_stack *stack, int num);
 void	pop(t_stack *stack);
 int		peek(t_stack *stack);
-void	printstack(t_stack *stack, char *msg);
 void	free_stacks(t_stack *stack_a, t_stack *stack_b);
 //stack operations
 void	swap(t_stack *stack, char *msg); //sa sb
@@ -41,6 +40,7 @@ void	do_twice(t_stack *stack_1, t_stack *stack_2, char *msg);
 int		ft_atoi(const char *str);
 int		ft_isdigit(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+long	ft_atoi_check(const char *str);
 //init
 void	init(int ac, char **av, t_stack *stack_a, t_stack *stack_b);
 void	fillstack(int ac, char **av, t_stack *stack_a, t_stack *stack_b);

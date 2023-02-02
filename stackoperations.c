@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 10:29:19 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/01 17:02:41 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/02 18:16:08 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	swap(t_stack *stack, char *msg)
 		tmp = stack->array[stack->top];
 		stack->array[stack->top] = stack->array[stack->top - 1];
 		stack->array[stack->top - 1] = tmp;
-		printf("%s\n", msg);
+		write(1, msg, 2);
+		write(1, "\n", 1);
 		return ;
 	}
 	write(1, msg, 2);
@@ -89,7 +90,7 @@ void	do_twice(t_stack *stack_1, t_stack *stack_2, char *msg)
 	}
 	else
 	{
-		printf("error at do_twice\n");
+		write(1, "error at do_twice\n", 18);
 		return ;
 	}
 	write(1, msg, 2);
