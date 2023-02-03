@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:30:58 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/02 17:53:52 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/03 15:24:17 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	small_sort(t_stack *stack_a, t_stack *stack_b)
 
 void	sort_three(t_stack *stack_a, t_stack *stack_b)
 {
+	(void)stack_b;
 	if (!check_sorted_stack(stack_a))
 		return ;
 	if (peek(stack_a) == 0)

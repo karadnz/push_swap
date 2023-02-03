@@ -6,7 +6,7 @@
 #    By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/27 18:19:32 by mkaraden          #+#    #+#              #
-#    Updated: 2023/02/02 18:16:42 by mkaraden         ###   ########.fr        #
+#    Updated: 2023/02/03 15:23:37 by mkaraden         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,18 +19,18 @@ OBJ = $(SRC:.c=.o)
 
 CC				=	gcc
 RM 				=	rm -rf
-FLAGS			= 	-Wall -Werror -Wextra
+CFLAGS			= 	-Wall -Werror -Wextra
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+	@$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re : fclean all
 
