@@ -6,7 +6,7 @@
 /*   By: mkaraden <mkaraden@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 08:32:47 by mkaraden          #+#    #+#             */
-/*   Updated: 2023/02/02 18:47:39 by mkaraden         ###   ########.fr       */
+/*   Updated: 2023/02/03 13:59:36 by mkaraden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	init(int ac, char **av, t_stack *stack_a, t_stack *stack_b)
 	}
 	if (!check_sorted(ac, av))
 	{
-		write(2, "\n", 1);
+		write(1, "\n", 1);
 		free_stacks(stack_a, stack_b);
 		exit(1);
 	}
